@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar activo - SAAAF</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <h1>Registrar activo fijo</h1>
+            <p>Formulario HTML conectado al servlet <strong>ActivoServlet</strong> mediante método POST.</p>
+        </header>
+
+        <form class="form-card" action="activos" method="post" id="registro-form">
+            <input type="hidden" name="csrf" id="csrf-token">
+            <p id="token-error" role="alert"></p>
+            <input type="hidden" name="accion" value="guardar">
+
+            <label>Código del activo</label>
+            <input type="text" name="codigoActivo" placeholder="ACT-004" required>
+
+            <label>Nombre del activo</label>
+            <input type="text" name="nombreActivo" placeholder="Monitor Lenovo 24" required>
+
+            <label>Tipo de activo</label>
+            <select name="tipoActivo" required>
+                <option value="Equipo TI">Equipo TI</option>
+                <option value="Equipo AV">Equipo AV</option>
+                <option value="Mobiliario">Mobiliario</option>
+                <option value="Herramienta">Herramienta</option>
+            </select>
+
+            <label>Área</label>
+            <input type="text" name="area" placeholder="Tecnología" required>
+
+            <label>Responsable</label>
+            <input type="text" name="responsable" placeholder="Brayan Giraldo">
+
+            <label>Estado</label>
+            <select name="estado" required>
+                <option value="Disponible">Disponible</option>
+                <option value="Asignado">Asignado</option>
+                <option value="Mantenimiento">Mantenimiento</option>
+                <option value="Baja">Baja</option>
+            </select>
+
+            <label>Fecha de registro</label>
+            <input type="date" name="fechaRegistro" required>
+
+            <label>Observaciones</label>
+            <textarea name="observaciones" rows="3" placeholder="Observaciones del activo"></textarea>
+
+            <button class="btn btn-primary" type="submit" id="guardar-html" disabled>Guardar activo</button>
+            <a class="btn btn-secondary" href="index.html">Volver</a>
+        </form>
+    </main>
+<script src="assets/js/formulario.js"></script>
+</body>
+</html>

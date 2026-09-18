@@ -1,0 +1,87 @@
+commit 59f4ccadefcaf5ac57e75cff84e1722f70f84ca9
+Author:     SAAAF - Preparacion asistida <saaaf-evidencia@example.invalid>
+AuthorDate: Tue Sep 15 21:01:03 2026 +0000
+Commit:     SAAAF - Preparacion asistida <saaaf-evidencia@example.invalid>
+CommitDate: Tue Sep 15 21:01:03 2026 +0000
+
+    Desarrollar validaciones modulos y pruebas con alcance documentado
+
+ .gitignore                                         |   5 +
+ 02_Aplicacion_Web/README.md                        |  41 +
+ 02_Aplicacion_Web/SAAAF_Demostracion.html          | 849 +++++++++++++++++++++
+ 02_Aplicacion_Web/css/estilos.css                  | 140 ++++
+ 02_Aplicacion_Web/generar_portable.py              |   9 +
+ 02_Aplicacion_Web/index.html                       | 260 +++++++
+ 02_Aplicacion_Web/iniciar.py                       |  24 +
+ 02_Aplicacion_Web/iniciar_windows.bat              |   9 +
+ 02_Aplicacion_Web/js/core.js                       | 230 ++++++
+ 02_Aplicacion_Web/js/ui.js                         | 219 ++++++
+ 02_Aplicacion_Web/tests/baseline_original.py       |  59 ++
+ 02_Aplicacion_Web/tests/browser_test.py            | 226 ++++++
+ 02_Aplicacion_Web/tests/core.test.js               |  56 ++
+ 03_Java_Servlets/README.md                         |  84 +-
+ 03_Java_Servlets/database/datos_demo.sql           |   6 +
+ 03_Java_Servlets/database/saaaf_web.sql            |   9 +-
+ 03_Java_Servlets/docs/pruebas_funcionales.md       |  23 +-
+ 03_Java_Servlets/enlace_repositorio.txt            |   8 +-
+ 03_Java_Servlets/git_comandos.txt                  |  19 +-
+ 03_Java_Servlets/pom.xml                           |   4 +-
+ .../java/co/sena/saaaf/config/ConexionJDBC.java    |  29 +-
+ .../src/main/java/co/sena/saaaf/dao/ActivoDAO.java |  25 +-
+ .../java/co/sena/saaaf/security/CsrfToken.java     |  32 +
+ .../co/sena/saaaf/security/SeguridadFilter.java    |  20 +
+ .../java/co/sena/saaaf/servlet/ActivoServlet.java  | 155 ++--
+ .../co/sena/saaaf/servlet/DashboardServlet.java    |   8 +-
+ .../java/co/sena/saaaf/servlet/TokenServlet.java   |  18 +
+ .../src/main/java/co/sena/saaaf/util/Html.java     |  11 +
+ .../co/sena/saaaf/validation/ValidacionActivo.java |  53 ++
+ .../src/main/webapp/WEB-INF/views/activos.jsp      |  23 +-
+ .../src/main/webapp/WEB-INF/views/dashboard.jsp    |  11 +-
+ .../src/main/webapp/WEB-INF/views/error.jsp        |   4 +
+ .../src/main/webapp/WEB-INF/views/form-activo.jsp  |  24 +-
+ .../src/main/webapp/assets/css/styles.css          |   3 +
+ 03_Java_Servlets/src/main/webapp/assets/js/app.js  |  11 +-
+ .../src/main/webapp/assets/js/formulario.js        |   6 +
+ .../src/main/webapp/registro-activo.html           |   7 +-
+ .../test/java/co/sena/saaaf/tests/PruebasJava.java | 131 ++++
+ 03_Java_Servlets/tests/ejecutar_java.py            |  20 +
+ .../saaaf-html-code.html                           |   0
+ 07_Documentacion/Cambios_y_diagnostico.md          |  30 +
+ 07_Documentacion/Manual_tecnico.md                 |  39 +
+ 07_Documentacion/Manual_usuario.md                 |  61 ++
+ 07_Documentacion/Trazabilidad.md                   |  18 +
+ .../Validacion_pendiente_despliegue.md             |  18 +
+ README.md                                          |  36 +-
+ 46 files changed, 2830 insertions(+), 243 deletions(-)
+
+commit 629a348adef345bebc3a79d7df0d723290d4296f
+Author:     SAAAF - Preparacion asistida <saaaf-evidencia@example.invalid>
+AuthorDate: Tue Sep 15 21:01:02 2026 +0000
+Commit:     SAAAF - Preparacion asistida <saaaf-evidencia@example.invalid>
+CommitDate: Tue Sep 15 21:01:02 2026 +0000
+
+    Conservar base HTML y Java recibida para la evidencia
+
+ 02_Aplicacion_Web/saaaf-html-code.html             | 685 +++++++++++++++++++++
+ 03_Java_Servlets/.gitignore                        |   7 +
+ 03_Java_Servlets/README.md                         |  48 ++
+ 03_Java_Servlets/database/saaaf_web.sql            |  22 +
+ 03_Java_Servlets/docs/pruebas_funcionales.md       |  22 +
+ 03_Java_Servlets/enlace_repositorio.txt            |   5 +
+ 03_Java_Servlets/git_comandos.txt                  |  14 +
+ 03_Java_Servlets/pom.xml                           |  54 ++
+ .../java/co/sena/saaaf/config/ConexionJDBC.java    |  28 +
+ .../src/main/java/co/sena/saaaf/dao/ActivoDAO.java |  99 +++
+ .../src/main/java/co/sena/saaaf/model/Activo.java  |  91 +++
+ .../java/co/sena/saaaf/servlet/ActivoServlet.java  | 117 ++++
+ .../co/sena/saaaf/servlet/DashboardServlet.java    |  43 ++
+ .../src/main/webapp/WEB-INF/views/activos.jsp      |  62 ++
+ .../src/main/webapp/WEB-INF/views/dashboard.jsp    |  61 ++
+ .../src/main/webapp/WEB-INF/views/form-activo.jsp  |  62 ++
+ 03_Java_Servlets/src/main/webapp/WEB-INF/web.xml   |  10 +
+ .../src/main/webapp/assets/css/styles.css          | 143 +++++
+ 03_Java_Servlets/src/main/webapp/assets/js/app.js  |   6 +
+ 03_Java_Servlets/src/main/webapp/index.html        |  33 +
+ .../src/main/webapp/registro-activo.html           |  58 ++
+ README.md                                          |   1 +
+ 22 files changed, 1671 insertions(+)

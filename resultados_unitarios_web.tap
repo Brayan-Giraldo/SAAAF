@@ -1,0 +1,298 @@
+TAP version 13
+# Subtest: UT-01 | Inicio sin registros y esquema valido
+ok 1 - UT-01 | Inicio sin registros y esquema valido
+  ---
+  duration_ms: 1.535544
+  type: 'test'
+  ...
+# Subtest: UT-02 | Crear activo y registrar alta
+ok 2 - UT-02 | Crear activo y registrar alta
+  ---
+  duration_ms: 4.039996
+  type: 'test'
+  ...
+# Subtest: UT-03 | Nombre obligatorio
+ok 3 - UT-03 | Nombre obligatorio
+  ---
+  duration_ms: 0.519092
+  type: 'test'
+  ...
+# Subtest: UT-04 | Codigo obligatorio y minimo de caracteres
+ok 4 - UT-04 | Codigo obligatorio y minimo de caracteres
+  ---
+  duration_ms: 0.153531
+  type: 'test'
+  ...
+# Subtest: UT-05 | Rechazar codigo duplicado normalizado
+ok 5 - UT-05 | Rechazar codigo duplicado normalizado
+  ---
+  duration_ms: 0.833366
+  type: 'test'
+  ...
+# Subtest: UT-06 | Tipo obligatorio
+ok 6 - UT-06 | Tipo obligatorio
+  ---
+  duration_ms: 0.2124
+  type: 'test'
+  ...
+# Subtest: UT-07 | Area obligatoria
+ok 7 - UT-07 | Area obligatoria
+  ---
+  duration_ms: 0.140532
+  type: 'test'
+  ...
+# Subtest: UT-08 | Rechazar valor negativo
+ok 8 - UT-08 | Rechazar valor negativo
+  ---
+  duration_ms: 0.116135
+  type: 'test'
+  ...
+# Subtest: UT-09 | Rechazar valor no numerico
+ok 9 - UT-09 | Rechazar valor no numerico
+  ---
+  duration_ms: 0.297248
+  type: 'test'
+  ...
+# Subtest: UT-10 | Fecha obligatoria
+ok 10 - UT-10 | Fecha obligatoria
+  ---
+  duration_ms: 0.342886
+  type: 'test'
+  ...
+# Subtest: UT-11 | Rechazar fecha de calendario inexistente
+ok 11 - UT-11 | Rechazar fecha de calendario inexistente
+  ---
+  duration_ms: 0.179841
+  type: 'test'
+  ...
+# Subtest: UT-12 | Editar conserva ID y no duplica el registro
+ok 12 - UT-12 | Editar conserva ID y no duplica el registro
+  ---
+  duration_ms: 0.412842
+  type: 'test'
+  ...
+# Subtest: UT-13 | Historial permanece vinculado al ID tras renombrar
+ok 13 - UT-13 | Historial permanece vinculado al ID tras renombrar
+  ---
+  duration_ms: 0.310137
+  type: 'test'
+  ...
+# Subtest: UT-14 | Asignacion actualiza estado responsable y area
+ok 14 - UT-14 | Asignacion actualiza estado responsable y area
+  ---
+  duration_ms: 0.398871
+  type: 'test'
+  ...
+# Subtest: UT-15 | Rechazar doble asignacion del mismo activo
+ok 15 - UT-15 | Rechazar doble asignacion del mismo activo
+  ---
+  duration_ms: 0.334484
+  type: 'test'
+  ...
+# Subtest: UT-16 | Cedula debe ser numerica
+ok 16 - UT-16 | Cedula debe ser numerica
+  ---
+  duration_ms: 0.26535
+  type: 'test'
+  ...
+# Subtest: UT-17 | Colaborador obligatorio
+ok 17 - UT-17 | Colaborador obligatorio
+  ---
+  duration_ms: 0.166751
+  type: 'test'
+  ...
+# Subtest: UT-18 | Asignacion posterior o igual al ingreso
+ok 18 - UT-18 | Asignacion posterior o igual al ingreso
+  ---
+  duration_ms: 0.148533
+  type: 'test'
+  ...
+# Subtest: UT-19 | Devolucion libera activo y conserva historial
+ok 19 - UT-19 | Devolucion libera activo y conserva historial
+  ---
+  duration_ms: 0.588126
+  type: 'test'
+  ...
+# Subtest: UT-20 | Rechazar devolucion repetida
+ok 20 - UT-20 | Rechazar devolucion repetida
+  ---
+  duration_ms: 0.233602
+  type: 'test'
+  ...
+# Subtest: UT-21 | Rechazar devolucion anterior a asignacion
+ok 21 - UT-21 | Rechazar devolucion anterior a asignacion
+  ---
+  duration_ms: 0.233542
+  type: 'test'
+  ...
+# Subtest: UT-22 | No dar de baja activo asignado
+ok 22 - UT-22 | No dar de baja activo asignado
+  ---
+  duration_ms: 0.223266
+  type: 'test'
+  ...
+# Subtest: UT-23 | Impedir cambio directo que rompa asignacion
+ok 23 - UT-23 | Impedir cambio directo que rompa asignacion
+  ---
+  duration_ms: 0.750691
+  type: 'test'
+  ...
+# Subtest: UT-24 | No crear un activo como asignado sin registro
+ok 24 - UT-24 | No crear un activo como asignado sin registro
+  ---
+  duration_ms: 0.162054
+  type: 'test'
+  ...
+# Subtest: UT-25 | Registrar mantenimiento cambia estado
+ok 25 - UT-25 | Registrar mantenimiento cambia estado
+  ---
+  duration_ms: 0.289086
+  type: 'test'
+  ...
+# Subtest: UT-26 | Tecnico obligatorio
+ok 26 - UT-26 | Tecnico obligatorio
+  ---
+  duration_ms: 0.15963
+  type: 'test'
+  ...
+# Subtest: UT-27 | Descripcion de mantenimiento obligatoria
+ok 27 - UT-27 | Descripcion de mantenimiento obligatoria
+  ---
+  duration_ms: 0.934297
+  type: 'test'
+  ...
+# Subtest: UT-28 | No abrir mantenimiento sobre activo asignado
+ok 28 - UT-28 | No abrir mantenimiento sobre activo asignado
+  ---
+  duration_ms: 0.188254
+  type: 'test'
+  ...
+# Subtest: UT-29 | Impedir dos mantenimientos simultaneos
+ok 29 - UT-29 | Impedir dos mantenimientos simultaneos
+  ---
+  duration_ms: 0.229596
+  type: 'test'
+  ...
+# Subtest: UT-30 | Completar mantenimiento libera activo
+ok 30 - UT-30 | Completar mantenimiento libera activo
+  ---
+  duration_ms: 0.281705
+  type: 'test'
+  ...
+# Subtest: UT-31 | Cancelar mantenimiento conserva registro y libera
+ok 31 - UT-31 | Cancelar mantenimiento conserva registro y libera
+  ---
+  duration_ms: 0.189856
+  type: 'test'
+  ...
+# Subtest: UT-32 | No cerrar dos veces el mantenimiento
+ok 32 - UT-32 | No cerrar dos veces el mantenimiento
+  ---
+  duration_ms: 0.19872
+  type: 'test'
+  ...
+# Subtest: UT-33 | Baja logica conserva activo e historial
+ok 33 - UT-33 | Baja logica conserva activo e historial
+  ---
+  duration_ms: 0.168574
+  type: 'test'
+  ...
+# Subtest: UT-34 | No asignar activo dado de baja
+ok 34 - UT-34 | No asignar activo dado de baja
+  ---
+  duration_ms: 0.147081
+  type: 'test'
+  ...
+# Subtest: UT-35 | Reporte combina rango area y estado
+ok 35 - UT-35 | Reporte combina rango area y estado
+  ---
+  duration_ms: 0.209065
+  type: 'test'
+  ...
+# Subtest: UT-36 | Reporte rechaza rango de fechas invertido
+ok 36 - UT-36 | Reporte rechaza rango de fechas invertido
+  ---
+  duration_ms: 0.149385
+  type: 'test'
+  ...
+# Subtest: UT-37 | CSV conserva cero y escapa comillas
+ok 37 - UT-37 | CSV conserva cero y escapa comillas
+  ---
+  duration_ms: 0.242805
+  type: 'test'
+  ...
+# Subtest: UT-38 | CSV neutraliza texto que inicia como formula
+ok 38 - UT-38 | CSV neutraliza texto que inicia como formula
+  ---
+  duration_ms: 0.110296
+  type: 'test'
+  ...
+# Subtest: UT-39 | Preferencias se guardan en la transaccion
+ok 39 - UT-39 | Preferencias se guardan en la transaccion
+  ---
+  duration_ms: 0.177308
+  type: 'test'
+  ...
+# Subtest: UT-40 | Respaldo valido se puede restaurar
+ok 40 - UT-40 | Respaldo valido se puede restaurar
+  ---
+  duration_ms: 0.138239
+  type: 'test'
+  ...
+# Subtest: UT-41 | Rechazar version de respaldo incompatible
+ok 41 - UT-41 | Rechazar version de respaldo incompatible
+  ---
+  duration_ms: 0.08648
+  type: 'test'
+  ...
+# Subtest: UT-42 | Rechazar respaldo con referencia huerfana
+ok 42 - UT-42 | Rechazar respaldo con referencia huerfana
+  ---
+  duration_ms: 0.21209
+  type: 'test'
+  ...
+# Subtest: UT-43 | Rechazar identificador peligroso en respaldo
+ok 43 - UT-43 | Rechazar identificador peligroso en respaldo
+  ---
+  duration_ms: 0.142655
+  type: 'test'
+  ...
+# Subtest: UT-44 | Fallo de escritura no confirma ni muta el estado
+ok 44 - UT-44 | Fallo de escritura no confirma ni muta el estado
+  ---
+  duration_ms: 1.027368
+  type: 'test'
+  ...
+# Subtest: UT-45 | Lectura del estado devuelve copia defensiva
+ok 45 - UT-45 | Lectura del estado devuelve copia defensiva
+  ---
+  duration_ms: 0.211239
+  type: 'test'
+  ...
+# Subtest: UT-46 | Persistencia detecta conflicto entre pestanas
+ok 46 - UT-46 | Persistencia detecta conflicto entre pestanas
+  ---
+  duration_ms: 0.223487
+  type: 'test'
+  ...
+# Subtest: UT-47 | Texto con etiquetas se conserva como dato, no se ejecuta en dominio
+ok 47 - UT-47 | Texto con etiquetas se conserva como dato, no se ejecuta en dominio
+  ---
+  duration_ms: 0.143516
+  type: 'test'
+  ...
+# Subtest: UT-48 | No editar activo inexistente
+ok 48 - UT-48 | No editar activo inexistente
+  ---
+  duration_ms: 1.140939
+  type: 'test'
+  ...
+1..48
+# tests 48
+# suites 0
+# pass 48
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 106.288829

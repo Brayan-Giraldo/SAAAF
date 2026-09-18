@@ -1,0 +1,6 @@
+/mnt/data/SAAAF_GA7_AA3_EV02_Brayan_Giraldo/06_Versionamiento/saaaf_fuentes.bundle is okay
+The bundle contains these 2 refs:
+59f4ccadefcaf5ac57e75cff84e1722f70f84ca9 refs/heads/main
+59f4ccadefcaf5ac57e75cff84e1722f70f84ca9 HEAD
+The bundle records a complete history.
+The bundle uses this hash algorithm: sha1

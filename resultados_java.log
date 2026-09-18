@@ -1,0 +1,43 @@
+Fecha UTC: 2026-09-15T20:56:33.593211660Z
+JDK: 21.0.11
+JDBC de prueba: HSQL Database Engine 1.8.0
+JV-01 | APROBADA | Normalizar codigo y validar activo
+JV-02 | APROBADA | Rechazar nombre vacio
+JV-03 | APROBADA | Rechazar codigo corto
+JV-04 | APROBADA | Rechazar nombre demasiado largo
+JV-05 | APROBADA | Rechazar tipo vacio
+JV-06 | APROBADA | Rechazar area nula
+JV-07 | APROBADA | Rechazar estado desconocido
+JV-08 | APROBADA | Rechazar estado nulo de forma controlada
+JV-09 | APROBADA | Asignado requiere responsable
+JV-10 | APROBADA | Rechazar fecha inexistente
+JV-11 | APROBADA | Rechazar identificador no numerico
+JV-12 | APROBADA | Rechazar fecha nula
+JV-13 | APROBADA | Escapar HTML y atributos
+JV-14 | APROBADA | Token generado por sesion y valido
+JV-15 | APROBADA | Rechazar token alterado
+JV-16 | APROBADA | Rechazar token ausente
+JV-17 | APROBADA | DAO insertar y listar con JDBC real
+JV-18 | APROBADA | DAO consultar por ID
+JV-19 | APROBADA | DAO actualizar registro
+JV-20 | APROBADA | DAO informa actualizacion inexistente
+JV-21 | APROBADA | DAO restriccion de codigo unico
+JV-22 | APROBADA | DAO guarda texto SQL como dato
+JV-23 | APROBADA | DAO eliminar registro
+JV-24 | APROBADA | DAO eliminar inexistente devuelve falso
+JV-25 | APROBADA | GET eliminar devuelve 405 sin modificar
+JV-26 | APROBADA | GET ID invalido devuelve 400
+JV-27 | APROBADA | GET activo inexistente devuelve 404
+JV-28 | APROBADA | GET listar prepara vista y token
+JV-29 | APROBADA | POST sin token devuelve 403
+JV-30 | APROBADA | POST invalido devuelve 400
+JV-31 | APROBADA | POST guardar inserta y redirige
+JV-32 | APROBADA | POST duplicado devuelve 409
+JV-33 | APROBADA | POST actualizar persiste los cambios
+JV-34 | APROBADA | POST eliminar con token elimina
+JV-35 | APROBADA | Accion desconocida rechazada
+JV-36 | APROBADA | Error SQL no revela detalle tecnico
+JV-37 | APROBADA | Dashboard calcula indicadores
+JV-38 | APROBADA | Filtro agrega codificacion y cabeceras
+RESUMEN | 38 aprobadas | 0 fallidas
+ALCANCE | Compilacion Java 11, validadores, DAO con HSQLDB y servlets con dobles. Sin MySQL ni Tomcat/JSP ejecutados.

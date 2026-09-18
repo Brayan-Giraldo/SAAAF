@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SAAAF | Evidencia GA7-AA3-EV02</title>
+
+<link href="css/estilos.css" rel="stylesheet"/></head>
+<body>
+<!-- LOGIN -->
+<div aria-label="Acceso de demostración" aria-modal="true" class="overlay open" id="login-screen" role="dialog" style="background:var(--dk)">
+<div class="modal" style="width:380px">
+<div class="login-box">
+<div class="login-logo">
+<svg fill="none" height="26" stroke="#fff" stroke-width="2" viewbox="0 0 24 24" width="26">
+<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+</svg>
+</div>
+<h3 style="font-size:18px;margin-bottom:4px">SAAAF</h3>
+<p style="font-size:12px;color:var(--tx3);margin-bottom:22px">Sistema de Administración de Activos Fijos</p>
+<div class="form-grid" style="grid-template-columns:1fr">
+<div class="form-group">
+<label for="login-user">Usuario</label>
+<input aria-label="Usuario" autocomplete="username" id="login-user" value="demo"/>
+</div>
+<div class="form-group">
+<label for="login-pass">Contraseña</label>
+<input aria-label="Contraseña" autocomplete="current-password" id="login-pass" type="password" value="DemoSaaaf2026!"/>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:6px;margin-top:10px;justify-content:center">
+<span class="tag Asignado" style="font-size:9px">Rol: Administrador</span>
+</div>
+<button class="btn btn-primary" id="login-btn" style="width:100%;justify-content:center;margin-top:14px" type="button">Ingresar</button>
+<p style="font-size:10px;color:var(--tx3);margin-top:14px">Demo local: demo / DemoSaaaf2026! No usar datos reales.</p>
+<p class="feedback-error" id="login-error" role="alert"></p><p class="feedback-error" id="storage-warning"></p></div>
+</div>
+</div>
+<div class="app" hidden="">
+<div class="main-wrap">
+<div class="sidebar">
+<div class="sb-logo">
+<div class="sb-logo-icon"><svg viewbox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg></div>
+<div><div class="name">SAAAF</div><div class="sub">Activos Fijos</div></div>
+</div>
+<div class="sb-section">Principal</div>
+<button class="sb-item on" data-page="dashboard" onclick="nav(this)"><svg viewbox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span>Dashboard</span></button>
+<button class="sb-item" data-page="activos" onclick="nav(this)"><svg viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="3"></rect><path d="M8 21h8M12 17v4"></path></svg><span>Activos</span><span class="badge-sm" id="badge-activos">0</span></button>
+<button class="sb-item" data-page="asignaciones" onclick="nav(this)"><svg viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Asignaciones</span></button>
+<button class="sb-item" data-page="mantenimiento" onclick="nav(this)"><svg viewbox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg><span>Mantenimiento</span><span class="badge-sm" id="badge-mant">0</span></button>
+<button class="sb-item" data-page="movimientos" onclick="nav(this)"><svg viewbox="0 0 24 24"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg><span>Movimientos</span></button>
+<div class="sb-section">Informes</div>
+<button class="sb-item" data-page="reportes" onclick="nav(this)"><svg viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg><span>Reportes</span></button>
+<button class="sb-item" data-page="config" onclick="nav(this)"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg><span>Configuración</span></button>
+<div class="sb-user">
+<div class="av">BG</div>
+<div><div class="nm">Brayan Giraldo</div><div class="role">Administrador</div></div>
+</div>
+</div>
+<div class="main-area">
+<div class="local-notice" role="note">Evidencia académica · Datos locales de este navegador · Sin conexión al proyecto Java</div><div class="topbar"><button aria-expanded="false" aria-label="Abrir menú" class="btn btn-ghost mobile-menu" id="menu-toggle" onclick="toggleSidebar()">Menú</button>
+<div class="page-title" id="page-title">Dashboard</div>
+<div class="tb-right">
+<div class="tb-search"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg><input id="search-input" oninput="filterActivos()" placeholder="Buscar activo..."/></div>
+<button class="btn btn-primary" onclick="openModal('modal-activo')"><svg viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>Nuevo Activo</button>
+<button class="btn btn-ghost" id="logout-btn" onclick="logout()">Salir</button></div>
+</div>
+<div class="content">
+<!-- DASHBOARD -->
+<div class="page active" id="page-dashboard">
+<div class="kpi-grid">
+<div class="kpi or"><div class="kl">Total Activos</div><div class="kv" id="kpi-total">0</div><div class="kt" id="kpi-total-sub"></div></div>
+<div class="kpi gr"><div class="kl">Disponibles</div><div class="kv" id="kpi-activos">0</div><div class="kt" id="kpi-activos-pct"></div></div>
+<div class="kpi bl"><div class="kl">Asignados</div><div class="kv" id="kpi-asignados">0</div><div class="kt" id="kpi-asignados-pct"></div></div>
+<div class="kpi am"><div class="kl">Mantenimiento</div><div class="kv" id="kpi-mant">0</div><div class="kt" id="kpi-mant-pct"></div></div>
+</div>
+<div class="two-col">
+<div class="panel"><div class="panel-head"><span class="ph-title">Activos recientes</span></div><div id="dash-recientes"><div class="empty">Sin registros aún</div></div></div>
+<div class="panel"><div class="panel-head"><span class="ph-title">Activos por área</span></div><div class="bar-area" id="dash-areas"><div class="empty" style="padding:24px">Sin datos</div></div></div>
+</div>
+<div class="panel"><div class="panel-head"><span class="ph-title">Estado de activos</span></div><div id="dash-estado"><div class="empty">Sin registros</div></div></div>
+</div>
+<!-- ACTIVOS -->
+<div class="page" id="page-activos">
+<div class="sec-hd"><h2>Gestión de Activos</h2><button class="btn btn-primary" onclick="openModal('modal-activo')"><svg viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>Nuevo Activo</button></div>
+<div class="chips">
+<button class="chip on" onclick="setFilter(this,'')">Todos</button>
+<button class="chip" onclick="setFilter(this,'Activo')">Activo</button>
+<button class="chip" onclick="setFilter(this,'Asignado')">Asignado</button>
+<button class="chip" onclick="setFilter(this,'Mantenimiento')">Mantenimiento</button>
+<button class="chip" onclick="setFilter(this,'Baja')">Baja</button>
+</div>
+<div class="panel tbl-wrap">
+<table class="tbl">
+<thead><tr><th>Nombre</th><th>Código</th><th>Tipo</th><th>Área</th><th>Responsable</th><th>Estado</th><th>Acciones</th></tr></thead>
+<tbody id="tbl-activos"></tbody>
+</table>
+</div>
+</div>
+<!-- ASIGNACIONES -->
+<div class="page" id="page-asignaciones">
+<div class="sec-hd"><h2>Asignaciones</h2><button class="btn btn-primary" onclick="openModal('modal-asign')"><svg viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>Nueva Asignación</button></div>
+<div class="panel tbl-wrap">
+<table class="tbl">
+<thead><tr><th>Colaborador</th><th>Cédula</th><th>Activo</th><th>Área</th><th>Fecha</th><th>Estado</th><th>Acciones</th></tr></thead>
+<tbody id="tbl-asign"></tbody>
+</table>
+</div>
+</div>
+<!-- MANTENIMIENTO -->
+<div class="page" id="page-mantenimiento">
+<div class="sec-hd"><h2>Mantenimiento</h2><button class="btn btn-primary" onclick="openModal('modal-mant')"><svg viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>Registrar Mantenimiento</button></div>
+<div class="panel tbl-wrap">
+<table class="tbl">
+<thead><tr><th>Activo</th><th>Tipo</th><th>Descripción</th><th>Técnico</th><th>Fecha</th><th>Estado</th><th>Acciones</th></tr></thead>
+<tbody id="tbl-mant"></tbody>
+</table>
+</div>
+</div>
+<!-- MOVIMIENTOS -->
+<div class="page" id="page-movimientos">
+<div class="sec-hd"><h2>Trazabilidad de Movimientos</h2></div>
+<p style="font-size:12px;color:var(--tx3);margin-bottom:16px">Registro automático de altas, ediciones, asignaciones, devoluciones, mantenimientos y bajas.</p>
+<div class="panel tbl-wrap">
+<table class="tbl">
+<thead><tr><th>Fecha y hora</th><th>Movimiento</th><th>Activo</th><th>Detalle</th><th>Usuario</th></tr></thead>
+<tbody id="tbl-mov"></tbody>
+</table>
+</div>
+</div>
+<!-- REPORTES -->
+<div class="page" id="page-reportes">
+<div class="sec-hd"><h2>Reportes</h2></div>
+<div class="panel" style="padding:16px 18px;margin-bottom:20px">
+<div style="font-size:11px;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;font-weight:600">Filtros del reporte</div>
+<div class="form-grid">
+<div class="form-group"><label for="rf-fecha-ini">Fecha inicial</label><input id="rf-fecha-ini" onchange="renderReportes()" type="date"/></div>
+<div class="form-group"><label for="rf-fecha-fin">Fecha final</label><input id="rf-fecha-fin" onchange="renderReportes()" type="date"/></div>
+<div class="form-group"><label for="rf-area">Área</label><select id="rf-area" onchange="renderReportes()"><option value="">Todas</option><option>Tecnología</option><option>Administración</option><option>RRHH</option><option>Contabilidad</option><option>Ventas</option><option>Gerencia</option><option>Bodega</option><option>Otro</option></select></div>
+<div class="form-group"><label for="rf-estado">Estado</label><select id="rf-estado" onchange="renderReportes()"><option value="">Todos</option><option>Activo</option><option>Asignado</option><option>Mantenimiento</option><option>Baja</option></select></div>
+</div>
+<div style="display:flex;justify-content:flex-end;gap:8px;margin-top:12px">
+<button class="btn btn-ghost" onclick="clearRepFilters()">Limpiar filtros</button>
+<button class="btn btn-primary" onclick="renderReportes()">Generar</button>
+</div>
+</div>
+<div class="kpi-grid" style="margin-bottom:20px">
+<div class="kpi or"><div class="kl">Total Activos</div><div class="kv" id="r-total">0</div></div>
+<div class="kpi gr"><div class="kl">Activos</div><div class="kv" id="r-act">0</div></div>
+<div class="kpi bl"><div class="kl">Asignados</div><div class="kv" id="r-asig">0</div></div>
+<div class="kpi am"><div class="kl">Mantenimiento</div><div class="kv" id="r-mant">0</div></div>
+</div>
+<div class="two-col">
+<div class="panel"><div class="panel-head"><span class="ph-title">Por tipo de activo</span></div><div class="bar-area" id="rep-tipo"></div></div>
+<div class="panel"><div class="panel-head"><span class="ph-title">Por área</span></div><div class="bar-area" id="rep-area"></div></div>
+</div>
+<div class="panel" style="margin-top:16px">
+<div class="panel-head"><span class="ph-title">Activos filtrados</span><button class="btn btn-ghost" onclick="exportCSV()" style="font-size:11px;padding:5px 12px"><svg viewbox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>Exportar CSV</button></div>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Nombre</th><th>Código</th><th>Tipo</th><th>Área</th><th>Estado</th><th>Fecha ingreso</th></tr></thead><tbody id="rep-tbl"></tbody></table></div>
+</div>
+</div>
+<!-- CONFIGURACIÓN -->
+<div class="page" id="page-config">
+<div class="sec-hd"><h2>Configuración</h2></div>
+<div class="panel" style="padding:20px;max-width:480px">
+<div class="form-grid">
+<div class="form-group full"><label for="cfg-nombre">Nombre de usuario</label><input id="cfg-nombre" value="Brayan Giraldo García"/></div>
+<div class="form-group full"><label>Usuario de acceso</label><input disabled="" style="opacity:.7" value="demo"/></div>
+<div class="form-group full"><label>Rol</label><select disabled="" style="opacity:.7"><option>Administrador (todos los permisos)</option></select></div>
+<div class="form-group full"><label for="cfg-notif">Notificaciones</label><select id="cfg-notif"><option>Activadas</option><option>Desactivadas</option></select></div>
+</div>
+<div style="margin-top:16px;display:flex;justify-content:flex-end">
+<button class="btn btn-primary" onclick="saveConfig()">Guardar preferencias</button>
+</div>
+</div>
+<div class="panel backup-panel"><h3>Respaldo y recuperación</h3><p>El respaldo contiene inventario y datos de demostración. Guárdalo en un lugar privado. La importación reemplaza los datos locales solo después de validarlos y confirmar.</p><div class="backup-buttons"><button class="btn btn-ghost" onclick="exportBackup()">Exportar respaldo JSON</button><button class="btn btn-ghost" onclick="document.getElementById('backup-file').click()">Importar respaldo</button><button class="btn btn-danger" onclick="resetData()">Reiniciar datos locales</button></div><input accept=".json,application/json" hidden="" id="backup-file" onchange="importBackup(this.files[0]);this.value=''" type="file"/><p id="storage-status"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+<!-- MODALES -->
+<div aria-label="Nuevo Activo" aria-modal="true" class="overlay" id="modal-activo" role="dialog">
+<div class="modal">
+<div class="modal-head"><h3 id="modal-activo-title">Nuevo Activo</h3><button aria-label="Cerrar ventana" class="modal-close" onclick="closeModal('modal-activo')"><svg viewbox="0 0 24 24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg></button></div>
+<div class="modal-body">
+<input id="activo-edit-id" type="hidden"/>
+<div class="form-grid">
+<div class="form-group full"><label for="a-nombre">Nombre del activo</label><input id="a-nombre" placeholder="Ej: Laptop Dell Inspiron 15"/></div>
+<div class="form-group"><label for="a-codigo">Código / Serial</label><input id="a-codigo" placeholder="Ej: ACT-0021"/></div>
+<div class="form-group"><label for="a-tipo">Tipo</label><select id="a-tipo"><option value="">Seleccionar...</option><option>Equipo TI</option><option>Mobiliario</option><option>Vehículo</option><option>Herramienta</option><option>Equipo AV</option><option>Climatización</option><option>Otro</option></select></div>
+<div class="form-group"><label for="a-area">Área</label><select id="a-area"><option value="">Seleccionar...</option><option>Tecnología</option><option>Administración</option><option>RRHH</option><option>Contabilidad</option><option>Ventas</option><option>Gerencia</option><option>Bodega</option><option>Otro</option></select></div>
+<div class="form-group"><label for="a-responsable">Responsable</label><input id="a-responsable" placeholder="Nombre del responsable"/></div>
+<div class="form-group"><label for="a-estado">Estado</label><select id="a-estado"><option>Activo</option><option>Asignado</option><option>Mantenimiento</option><option>Baja</option></select></div>
+<div class="form-group"><label for="a-fecha">Fecha de ingreso</label><input id="a-fecha" type="date"/></div>
+<div class="form-group"><label for="a-valor">Valor ($)</label><input id="a-valor" min="0" placeholder="0" step="0.01" type="number"/></div>
+<div class="form-group full"><label for="a-obs">Observaciones</label><textarea id="a-obs" placeholder="Notas adicionales..." rows="2"></textarea></div>
+</div>
+</div>
+<div class="modal-footer"><button class="btn btn-ghost" onclick="closeModal('modal-activo')">Cancelar</button><button class="btn btn-primary" onclick="saveActivo()">Guardar Activo</button></div>
+</div>
+</div>
+<div aria-label="Nueva Asignación" aria-modal="true" class="overlay" id="modal-asign" role="dialog">
+<div class="modal">
+<div class="modal-head"><h3>Nueva Asignación</h3><button aria-label="Cerrar ventana" class="modal-close" onclick="closeModal('modal-asign')"><svg viewbox="0 0 24 24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg></button></div>
+<div class="modal-body">
+<input id="asign-edit-id" type="hidden"/>
+<div class="form-grid">
+<div class="form-group full"><label for="as-colaborador">Colaborador</label><input id="as-colaborador" placeholder="Nombre completo"/></div>
+<div class="form-group"><label for="as-cedula">Cédula</label><input id="as-cedula" inputmode="numeric" maxlength="15" placeholder="Número de cédula"/></div>
+<div class="form-group"><label for="as-area">Área</label><select id="as-area"><option value="">Seleccionar...</option><option>Tecnología</option><option>Administración</option><option>RRHH</option><option>Contabilidad</option><option>Ventas</option><option>Gerencia</option><option>Bodega</option></select></div>
+<div class="form-group full"><label for="as-activo">Activo a asignar</label><select id="as-activo"><option value="">Seleccionar activo disponible...</option></select></div>
+<div class="form-group"><label for="as-fecha">Fecha de asignación</label><input id="as-fecha" type="date"/></div>
+<div class="form-group"><label for="as-estado">Estado</label><select disabled="" id="as-estado"><option>Activo</option></select></div>
+<div class="form-group full"><label for="as-obs">Observaciones</label><textarea id="as-obs" placeholder="Notas adicionales..." rows="2"></textarea></div>
+</div>
+</div>
+<div class="modal-footer"><button class="btn btn-ghost" onclick="closeModal('modal-asign')">Cancelar</button><button class="btn btn-primary" onclick="saveAsign()">Guardar Asignación</button></div>
+</div>
+</div>
+<div aria-label="Registrar Mantenimiento" aria-modal="true" class="overlay" id="modal-mant" role="dialog">
+<div class="modal">
+<div class="modal-head"><h3>Registrar Mantenimiento</h3><button aria-label="Cerrar ventana" class="modal-close" onclick="closeModal('modal-mant')"><svg viewbox="0 0 24 24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg></button></div>
+<div class="modal-body">
+<input id="mant-edit-id" type="hidden"/>
+<div class="form-grid">
+<div class="form-group full"><label for="m-activo">Activo</label><select id="m-activo"><option value="">Seleccionar activo...</option></select></div>
+<div class="form-group"><label for="m-tipo">Tipo de mantenimiento</label><select id="m-tipo"><option>Preventivo</option><option>Correctivo</option><option>Predictivo</option></select></div>
+<div class="form-group"><label for="m-tecnico">Técnico responsable</label><input id="m-tecnico" placeholder="Nombre del técnico"/></div>
+<div class="form-group"><label for="m-fecha">Fecha</label><input id="m-fecha" type="date"/></div>
+<div class="form-group"><label for="m-estado">Estado</label><select id="m-estado"><option>Pendiente</option><option>En proceso</option></select></div>
+<div class="form-group full"><label for="m-desc">Descripción</label><textarea id="m-desc" placeholder="Describir el trabajo a realizar..." rows="2"></textarea></div>
+</div>
+</div>
+<div class="modal-footer"><button class="btn btn-ghost" onclick="closeModal('modal-mant')">Cancelar</button><button class="btn btn-primary" onclick="saveMant()">Guardar</button></div>
+</div>
+</div>
+<div aria-label="Detalle del activo" aria-modal="true" class="overlay" id="modal-detalle" role="dialog">
+<div class="modal">
+<div class="modal-head"><h3>Detalle del activo</h3><button aria-label="Cerrar ventana" class="modal-close" onclick="closeModal('modal-detalle')"><svg viewbox="0 0 24 24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg></button></div>
+<div class="modal-body" id="detalle-body"></div>
+</div>
+</div>
+<div aria-label="¿Eliminar registro?" aria-modal="true" class="overlay" id="modal-confirm" role="dialog">
+<div class="modal confirm-modal">
+<div class="confirm-body">
+<div class="c-icon"><svg viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6M14 11v6"></path><path d="M9 6V4h6v2"></path></svg></div>
+<h4 id="confirm-title">¿Eliminar registro?</h4>
+<p id="confirm-msg" style="margin-bottom:20px">Esta acción no se puede deshacer.</p>
+<div style="display:flex;gap:10px;justify-content:center">
+<button class="btn btn-ghost" onclick="closeModal('modal-confirm')">Cancelar</button>
+<button class="btn btn-danger" id="confirm-ok">Confirmar</button>
+</div>
+</div>
+</div>
+</div>
+<div aria-live="polite" class="toast" id="toast" role="status"><div class="t-dot" id="toast-dot"></div><span id="toast-msg"></span></div>
+
+<script defer="" src="js/core.js"></script><script defer="" src="js/ui.js"></script></body>
+</html>

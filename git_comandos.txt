@@ -1,0 +1,9 @@
+# Trabajo local: estos comandos no publican nada por si solos.
+git status
+git add .
+git commit -m "Documentar cambios y pruebas ejecutadas"
+
+# Despues de crear un remoto autorizado, usa su URL real.
+# No ejecutar con marcadores de ejemplo ni afirmar publicacion antes de comprobarla.
+# git remote add origin URL_REAL
+# git push -u origin main

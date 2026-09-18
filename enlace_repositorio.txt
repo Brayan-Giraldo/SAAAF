@@ -1,0 +1,3 @@
+No se ha creado ni publicado un repositorio remoto.
+El paquete incluye un repositorio Git local exportado como bundle en 06_Versionamiento.
+Registrar aqui el enlace real despues de publicar con una cuenta autorizada.

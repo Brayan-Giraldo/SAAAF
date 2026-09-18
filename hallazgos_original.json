@@ -1,0 +1,73 @@
+{
+  "fecha_utc": "2026-09-15T20:53:47.957685+00:00",
+  "navegador": "144.0.7559.96",
+  "modo": "DOM con Storage simulado",
+  "fuente": "05_Fuentes_Originales/saaaf-html-code.html",
+  "hallazgos": [
+    {
+      "id": "OB-01",
+      "hallazgo": "Acceso sin validacion",
+      "comprobacion": "El formulario acepta usuario y clave incorrectos",
+      "observado": "La funcion doLogin oculta el acceso con cualquier dato.",
+      "estado": "REPRODUCIDO"
+    },
+    {
+      "id": "OB-02",
+      "hallazgo": "Codigos duplicados",
+      "comprobacion": "Guardar dos veces el mismo codigo crea dos activos",
+      "observado": "Se almacenaron dos activos con ACT-001.",
+      "estado": "REPRODUCIDO"
+    },
+    {
+      "id": "OB-03",
+      "hallazgo": "Valor negativo aceptado",
+      "comprobacion": "Guardar un valor -10 sin validacion",
+      "observado": "El valor -10 fue aceptado.",
+      "estado": "REPRODUCIDO"
+    },
+    {
+      "id": "OB-04",
+      "hallazgo": "Asignacion eliminada deja activo ocupado",
+      "comprobacion": "Eliminar asignacion y comprobar estado del activo",
+      "observado": {
+        "estado": "Asignado",
+        "asignaciones": 0
+      },
+      "estado": "REPRODUCIDO"
+    },
+    {
+      "id": "OB-05",
+      "hallazgo": "Mantenimiento eliminado no libera activo",
+      "comprobacion": "Eliminar mantenimiento y comprobar activo",
+      "observado": {
+        "estado": "Mantenimiento",
+        "mantenimientos": 0
+      },
+      "estado": "REPRODUCIDO"
+    },
+    {
+      "id": "OB-06",
+      "hallazgo": "Preferencias no persistidas",
+      "comprobacion": "Guardar preferencias no escribe almacenamiento",
+      "observado": "El boton solo muestra un aviso; no escribe preferencias.",
+      "estado": "REPRODUCIDO"
+    },
+    {
+      "id": "OB-07",
+      "hallazgo": "HTML de usuario ejecutable",
+      "comprobacion": "Mostrar nombre de activo con etiqueta img y evento",
+      "observado": "Se ejecuto un manejador onerror almacenado como nombre de activo.",
+      "estado": "REPRODUCIDO"
+    },
+    {
+      "id": "OB-08",
+      "hallazgo": "Interfaz original recortada en movil",
+      "comprobacion": "La barra de acciones se extiende fuera de 390px",
+      "observado": {
+        "ancho_pantalla": 390,
+        "borde_derecho_barra": 705.81
+      },
+      "estado": "REPRODUCIDO"
+    }
+  ]
+}

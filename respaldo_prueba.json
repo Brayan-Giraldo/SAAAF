@@ -1,0 +1,185 @@
+{
+  "version": 2,
+  "revision": 12,
+  "activos": [
+    {
+      "nombre": "Impresora HP - Demo",
+      "codigo": "ACT-003",
+      "tipo": "Equipo TI",
+      "area": "Administración",
+      "responsable": "",
+      "estado": "Baja",
+      "fecha": "2026-01-10",
+      "valor": 0,
+      "obs": "",
+      "id": "id-mu35lrp5-rhc5pahagx"
+    },
+    {
+      "nombre": "Proyector Epson - Demo",
+      "codigo": "ACT-002",
+      "tipo": "Equipo TI",
+      "area": "Ventas",
+      "responsable": "",
+      "estado": "Activo",
+      "fecha": "2026-01-10",
+      "valor": 1500000,
+      "obs": "",
+      "id": "id-mu35lrlk-phuhyuh7bb"
+    },
+    {
+      "nombre": "Portatil Dell actualizado - Demo",
+      "codigo": "ACT-001",
+      "tipo": "Equipo TI",
+      "area": "Ventas",
+      "responsable": "",
+      "estado": "Activo",
+      "fecha": "2026-01-10",
+      "valor": 2500000,
+      "obs": "",
+      "id": "id-mu35lrhv-iyx8a2dmoe"
+    }
+  ],
+  "asigns": [
+    {
+      "id": "id-mu35lsoo-ng74gss03l",
+      "activoId": "id-mu35lrhv-iyx8a2dmoe",
+      "activoNombre": "Portatil Dell actualizado - Demo",
+      "colaborador": "Colaborador Demo",
+      "cedula": "10000001",
+      "area": "Ventas",
+      "fecha": "2026-02-01",
+      "estado": "Devuelto",
+      "obs": "",
+      "fechaDevolucion": "2026-09-15"
+    }
+  ],
+  "mants": [
+    {
+      "id": "id-mu35ltnx-63r5ehr62c",
+      "activoId": "id-mu35lrlk-phuhyuh7bb",
+      "activoNombre": "Proyector Epson - Demo",
+      "tipo": "Preventivo",
+      "tecnico": "Tecnico Demo",
+      "fecha": "2026-03-01",
+      "estado": "Cancelado",
+      "desc": "Revision preventiva de componentes",
+      "fechaCierre": "2026-09-15"
+    },
+    {
+      "id": "id-mu35ltaj-ypg45xr17e",
+      "activoId": "id-mu35lrlk-phuhyuh7bb",
+      "activoNombre": "Proyector Epson - Demo",
+      "tipo": "Preventivo",
+      "tecnico": "Tecnico Demo",
+      "fecha": "2026-03-01",
+      "estado": "Completado",
+      "desc": "Revision preventiva de componentes",
+      "fechaCierre": "2026-09-15"
+    }
+  ],
+  "movs": [
+    {
+      "id": "id-mu35ltty-mioi1buzuq",
+      "activoId": "id-mu35lrp5-rhc5pahagx",
+      "activo": "Impresora HP - Demo",
+      "tipo": "Baja",
+      "detalle": "Baja lógica; se conserva el historial",
+      "usuario": "Brayan Giraldo García",
+      "fecha": "2026-09-15T20:58:15.238Z"
+    },
+    {
+      "id": "id-mu35ltqn-a4wvjgfxpt",
+      "activoId": "id-mu35lrlk-phuhyuh7bb",
+      "activo": "Proyector Epson - Demo",
+      "tipo": "Cierre de mantenimiento",
+      "detalle": "Preventivo - Cancelado",
+      "usuario": "Brayan Giraldo García",
+      "fecha": "2026-09-15T20:58:15.119Z"
+    },
+    {
+      "id": "id-mu35ltnx-vskh5qdl8r",
+      "activoId": "id-mu35lrlk-phuhyuh7bb",
+      "activo": "Proyector Epson - Demo",
+      "tipo": "Mantenimiento",
+      "detalle": "Preventivo - Pendiente",
+      "usuario": "Brayan Giraldo García",
+      "fecha": "2026-09-15T20:58:15.021Z"
+    },
+    {
+      "id": "id-mu35ltjk-oqhhd7s0jo",
+      "activoId": "id-mu35lrlk-phuhyuh7bb",
+      "activo": "Proyector Epson - Demo",
+      "tipo": "Cierre de mantenimiento",
+      "detalle": "Preventivo - Completado",
+      "usuario": "Brayan Giraldo García",
+      "fecha": "2026-09-15T20:58:14.864Z"
+    },
+    {
+      "id": "id-mu35ltaj-qkwg4syxe7",
+      "activoId": "id-mu35lrlk-phuhyuh7bb",
+      "activo": "Proyector Epson - Demo",
+      "tipo": "Mantenimiento",
+      "detalle": "Preventivo - Pendiente",
+      "usuario": "Brayan Giraldo García",
+      "fecha": "2026-09-15T20:58:14.539Z"
+    },
+    {
+      "id": "id-mu35lt0a-b6ed1wwi7f",
+      "activoId": "id-mu35lrhv-iyx8a2dmoe",
+      "activo": "Portatil Dell actualizado - Demo",
+      "tipo": "Devolución",
+      "detalle": "Devuelto por Colaborador Demo",
+      "usuario": "Brayan Giraldo García",
+      "fecha": "2026-09-15T20:58:14.170Z"
+    },
+    {
+      "id": "id-mu35lsoo-8y4d1sjqlw",
+      "activoId": "id-mu35lrhv-iyx8a2dmoe",
+      "activo": "Portatil Dell actualizado - Demo",
+      "tipo": "Asignación",
+      "detalle": "Asignado a Colaborador Demo",
+      "usuario": "Brayan Giraldo García",
+      "fecha": "2026-09-15T20:58:13.752Z"
+    },
+    {
+      "id": "id-mu35lsbj-f70y7mdbls",
+      "activoId": "id-mu35lrhv-iyx8a2dmoe",
+      "activo": "Portatil Dell actualizado - Demo",
+      "tipo": "Edición",
+      "detalle": "Datos del activo actualizados",
+      "usuario": "Brayan Giraldo García",
+      "fecha": "2026-09-15T20:58:13.279Z"
+    },
+    {
+      "id": "id-mu35lrp5-5ps9zp3jxa",
+      "activoId": "id-mu35lrp5-rhc5pahagx",
+      "activo": "Impresora HP - Demo",
+      "tipo": "Alta",
+      "detalle": "Activo registrado",
+      "usuario": "Brayan Giraldo García",
+      "fecha": "2026-09-15T20:58:12.473Z"
+    },
+    {
+      "id": "id-mu35lrlk-ob2uioi16a",
+      "activoId": "id-mu35lrlk-phuhyuh7bb",
+      "activo": "Proyector Epson - Demo",
+      "tipo": "Alta",
+      "detalle": "Activo registrado",
+      "usuario": "Brayan Giraldo García",
+      "fecha": "2026-09-15T20:58:12.344Z"
+    },
+    {
+      "id": "id-mu35lrhv-m0q7m9a5gl",
+      "activoId": "id-mu35lrhv-iyx8a2dmoe",
+      "activo": "Portatil Dell - Demo",
+      "tipo": "Alta",
+      "detalle": "Activo registrado",
+      "usuario": "Brayan Giraldo García",
+      "fecha": "2026-09-15T20:58:12.211Z"
+    }
+  ],
+  "config": {
+    "nombre": "Brayan Giraldo Garcia - Demo",
+    "notificaciones": "Activadas"
+  }
+}

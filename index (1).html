@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAAAF - Inicio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <main class="login-card">
+        <section class="brand">
+            <div class="logo">S</div>
+            <h1>SAAAF</h1>
+            <p>Sistema de Administración de Activos Fijos</p>
+        </section>
+
+        <section class="acciones">
+            <h2>Módulo web con Servlets y JSP</h2>
+            <p>Seleccione una opción para consultar o registrar activos fijos del proyecto SAAAF.</p>
+            <a class="btn btn-primary" href="dashboard">Ver dashboard</a>
+            <a class="btn btn-secondary" href="activos">Consultar activos</a>
+            <a class="btn btn-secondary" href="registro-activo.html">Registrar activo con formulario HTML</a>
+        </section>
+
+        <form class="search-form" action="activos" method="get">
+            <label for="accion">Ejemplo de formulario HTML usando método GET</label>
+            <input type="hidden" id="accion" name="accion" value="listar">
+            <button class="btn btn-primary" type="submit">Ejecutar GET hacia ActivoServlet</button>
+        </form>
+    </main>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

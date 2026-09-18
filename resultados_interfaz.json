@@ -1,0 +1,315 @@
+{
+  "fecha_utc": "2026-09-15T20:58:19.823508+00:00",
+  "modo": "dom",
+  "navegador": "144.0.7559.96",
+  "viewport_escritorio": "1365x900",
+  "viewports_moviles": [
+    "390x844",
+    "360x800"
+  ],
+  "almacenamiento": "doble Storage en memoria",
+  "alcance": "Interfaz y dominio ejecutados en Chromium; sin servidor Java ni MySQL",
+  "errores_javascript": [],
+  "casos": [
+    {
+      "id": "UI-01",
+      "nombre": "Acceso incorrecto y Escape",
+      "pasos": "Ingresar clave incorrecta y pulsar Escape",
+      "esperado": "La pantalla de acceso permanece y el contenido no se muestra",
+      "obtenido": "La pantalla de acceso permanece y el contenido no se muestra",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 77.64
+    },
+    {
+      "id": "UI-02",
+      "nombre": "Acceso demostrativo correcto",
+      "pasos": "Ingresar demo y clave de demostracion",
+      "esperado": "Se abre Dashboard sin activos",
+      "obtenido": "Se abre Dashboard sin activos",
+      "estado": "APROBADA",
+      "evidencia": "capturas/01_acceso.png",
+      "duracion_ms": 97.96
+    },
+    {
+      "id": "UI-03",
+      "nombre": "Validacion de campos obligatorios",
+      "pasos": "Guardar el formulario de activo vacio",
+      "esperado": "No crea registros y muestra la validacion",
+      "obtenido": "No crea registros y muestra la validacion",
+      "estado": "APROBADA",
+      "evidencia": "capturas/02_validacion.png",
+      "duracion_ms": 442.63
+    },
+    {
+      "id": "UI-04",
+      "nombre": "Registro de tres activos",
+      "pasos": "Diligenciar tres formularios con datos ficticios",
+      "esperado": "Tres activos y tres movimientos de alta",
+      "obtenido": "Tres activos y tres movimientos de alta",
+      "estado": "APROBADA",
+      "evidencia": "capturas/03_inventario.png",
+      "duracion_ms": 674.58
+    },
+    {
+      "id": "UI-05",
+      "nombre": "Codigo duplicado",
+      "pasos": "Intentar registrar act-001 por segunda vez",
+      "esperado": "Rechaza el duplicado sin crear un cuarto activo",
+      "obtenido": "Rechaza el duplicado sin crear un cuarto activo",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 176.99
+    },
+    {
+      "id": "UI-06",
+      "nombre": "Valor negativo",
+      "pasos": "Registrar activo con valor -1",
+      "esperado": "Rechazo y ningun registro nuevo",
+      "obtenido": "Rechazo y ningun registro nuevo",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 192.95
+    },
+    {
+      "id": "UI-07",
+      "nombre": "Edicion de activo",
+      "pasos": "Abrir Editar y cambiar nombre",
+      "esperado": "Actualiza sin duplicar el activo",
+      "obtenido": "Actualiza sin duplicar el activo",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 157.35
+    },
+    {
+      "id": "UI-08",
+      "nombre": "Busqueda por codigo",
+      "pasos": "Escribir ACT-002 en la busqueda",
+      "esperado": "Solo muestra el proyector",
+      "obtenido": "Solo muestra el proyector",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 22.25
+    },
+    {
+      "id": "UI-09",
+      "nombre": "Validacion de cedula",
+      "pasos": "Intentar asignar con cedula alfanumerica",
+      "esperado": "Rechaza la asignacion",
+      "obtenido": "Rechaza la asignacion",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 285.96
+    },
+    {
+      "id": "UI-10",
+      "nombre": "Asignacion",
+      "pasos": "Asignar ACT-001 al Colaborador Demo",
+      "esperado": "Estado Asignado y responsable actualizado",
+      "obtenido": "Estado Asignado y responsable actualizado",
+      "estado": "APROBADA",
+      "evidencia": "capturas/04_asignacion.png",
+      "duracion_ms": 395.74
+    },
+    {
+      "id": "UI-11",
+      "nombre": "Cancelacion y confirmacion de devolucion",
+      "pasos": "Cancelar una devolucion; luego confirmar",
+      "esperado": "Cancelar conserva la asignacion; confirmar libera y conserva historial",
+      "obtenido": "Cancelar conserva la asignacion; confirmar libera y conserva historial",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 185.44
+    },
+    {
+      "id": "UI-12",
+      "nombre": "Tecnico de mantenimiento obligatorio",
+      "pasos": "Guardar mantenimiento sin tecnico",
+      "esperado": "No crea mantenimiento",
+      "obtenido": "No crea mantenimiento",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 228.86
+    },
+    {
+      "id": "UI-13",
+      "nombre": "Registro de mantenimiento",
+      "pasos": "Crear mantenimiento preventivo para ACT-002",
+      "esperado": "Activo en mantenimiento y registro Pendiente",
+      "obtenido": "Activo en mantenimiento y registro Pendiente",
+      "estado": "APROBADA",
+      "evidencia": "capturas/05_mantenimiento.png",
+      "duracion_ms": 370.01
+    },
+    {
+      "id": "UI-14",
+      "nombre": "Cierre de mantenimiento",
+      "pasos": "Pulsar Completar y confirmar",
+      "esperado": "Activo disponible, mantenimiento Completado",
+      "obtenido": "Activo disponible, mantenimiento Completado",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 95.63
+    },
+    {
+      "id": "UI-15",
+      "nombre": "Cancelacion de mantenimiento",
+      "pasos": "Abrir otro mantenimiento y cancelarlo",
+      "esperado": "Activo disponible, registro Cancelado conservado",
+      "obtenido": "Activo disponible, registro Cancelado conservado",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 254.36
+    },
+    {
+      "id": "UI-16",
+      "nombre": "Baja logica",
+      "pasos": "Dar de baja ACT-003 y confirmar",
+      "esperado": "Conserva tres activos y registra Baja",
+      "obtenido": "Conserva tres activos y registra Baja",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 120.77
+    },
+    {
+      "id": "UI-17",
+      "nombre": "Recuperacion de estado al reinicializar",
+      "pasos": "Reinicializar la pagina con el almacenamiento previo",
+      "esperado": "Recupera exactamente el estado previo; en DOM el Storage es simulado",
+      "obtenido": "Recupera exactamente el estado previo; en DOM el Storage es simulado",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 189.32
+    },
+    {
+      "id": "UI-18",
+      "nombre": "Preferencias guardadas",
+      "pasos": "Guardar nombre y reinicializar",
+      "esperado": "Recupera el nombre configurado; persistencia simulada en modo DOM",
+      "obtenido": "Recupera el nombre configurado; persistencia simulada en modo DOM",
+      "estado": "APROBADA",
+      "evidencia": "capturas/06_configuracion.png",
+      "duracion_ms": 574.84
+    },
+    {
+      "id": "UI-19",
+      "nombre": "Trazabilidad tras renombrar",
+      "pasos": "Consultar detalle del activo editado y el historial",
+      "esperado": "Se conservan alta asignacion y devolucion por ID",
+      "obtenido": "Se conservan alta asignacion y devolucion por ID",
+      "estado": "APROBADA",
+      "evidencia": "capturas/07_movimientos.png",
+      "duracion_ms": 447.6
+    },
+    {
+      "id": "UI-20",
+      "nombre": "Filtros combinados de reporte",
+      "pasos": "Area Ventas, estado Activo y rango del ano 2026",
+      "esperado": "Dos registros coinciden con los filtros",
+      "obtenido": "Dos registros coinciden con los filtros",
+      "estado": "APROBADA",
+      "evidencia": "capturas/08_reportes.png",
+      "duracion_ms": 321.18
+    },
+    {
+      "id": "UI-21",
+      "nombre": "Rango invertido",
+      "pasos": "Fecha inicial mayor a fecha final",
+      "esperado": "Mensaje de validacion y reporte vacio",
+      "obtenido": "Mensaje de validacion y reporte vacio",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 76.44
+    },
+    {
+      "id": "UI-22",
+      "nombre": "Descarga CSV",
+      "pasos": "Exportar todos los activos y leer el archivo descargado",
+      "esperado": "CSV real descargado con UTF-8, codigos y valor cero",
+      "obtenido": "CSV real descargado con UTF-8, codigos y valor cero",
+      "estado": "APROBADA",
+      "evidencia": "SAAAF_reporte_prueba.csv",
+      "duracion_ms": 38.6
+    },
+    {
+      "id": "UI-23",
+      "nombre": "Descarga de respaldo",
+      "pasos": "Exportar JSON y comparar contenido",
+      "esperado": "JSON descargado coincide con el estado completo",
+      "obtenido": "JSON descargado coincide con el estado completo",
+      "estado": "APROBADA",
+      "evidencia": "respaldo_prueba.json",
+      "duracion_ms": 133.17
+    },
+    {
+      "id": "UI-24",
+      "nombre": "Rechazo de respaldo incompatible",
+      "pasos": "Importar JSON con version 1",
+      "esperado": "No modifica datos y muestra rechazo",
+      "obtenido": "No modifica datos y muestra rechazo",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 116.73
+    },
+    {
+      "id": "UI-25",
+      "nombre": "Restauracion de respaldo",
+      "pasos": "Reiniciar datos e importar el respaldo valido",
+      "esperado": "Recupera tres activos y sus relaciones",
+      "obtenido": "Recupera tres activos y sus relaciones",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 206.21
+    },
+    {
+      "id": "UI-26",
+      "nombre": "Renderizado seguro de texto",
+      "pasos": "Registrar texto con etiqueta img y manejador de evento",
+      "esperado": "Lo muestra como texto sin ejecutar el evento",
+      "obtenido": "Lo muestra como texto sin ejecutar el evento",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 189.26
+    },
+    {
+      "id": "UI-27",
+      "nombre": "Vista movil 390 x 844",
+      "pasos": "Abrir menu Dashboard y formulario en viewport movil",
+      "esperado": "No hay desbordamiento global y el formulario cabe; no es telefono fisico",
+      "obtenido": "No hay desbordamiento global y el formulario cabe; no es telefono fisico",
+      "estado": "APROBADA",
+      "evidencia": "capturas/09_movil_dashboard.png",
+      "duracion_ms": 680.33
+    },
+    {
+      "id": "UI-28",
+      "nombre": "Vista movil 360 x 800",
+      "pasos": "Reducir viewport y navegar a Activos",
+      "esperado": "Sin desbordamiento global; tabla con desplazamiento propio",
+      "obtenido": "Sin desbordamiento global; tabla con desplazamiento propio",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 72.16
+    },
+    {
+      "id": "UI-29",
+      "nombre": "Almacenamiento corrupto y recuperacion",
+      "pasos": "Arrancar con JSON corrupto, intentar guardar y luego restaurar",
+      "esperado": "No sobreescribe el contenido corrupto; restaura con confirmacion",
+      "obtenido": "No sobreescribe el contenido corrupto; restaura con confirmacion",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 519.87
+    },
+    {
+      "id": "UI-30",
+      "nombre": "Cerrar demostracion",
+      "pasos": "Pulsar Salir",
+      "esperado": "Oculta la aplicacion y solicita ingreso nuevamente",
+      "obtenido": "Oculta la aplicacion y solicita ingreso nuevamente",
+      "estado": "APROBADA",
+      "evidencia": "",
+      "duracion_ms": 55.08
+    }
+  ]
+}

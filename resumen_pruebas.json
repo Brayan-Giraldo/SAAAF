@@ -1,0 +1,23 @@
+{
+  "fecha": "2026-09-15",
+  "dominio_web": {
+    "ejecutadas": 48,
+    "aprobadas": 48
+  },
+  "interfaz": {
+    "ejecutadas": 30,
+    "aprobadas": 30,
+    "modo": "dom",
+    "almacenamiento": "doble Storage en memoria",
+    "errores_javascript": []
+  },
+  "java": {
+    "ejecutadas": 38,
+    "aprobadas": 38,
+    "motor_pruebas": "HSQLDB 1.8.0",
+    "controladores": "Dobles HTTP, sin JSP"
+  },
+  "defectos_originales_reproducidos": 8,
+  "total_ejecutadas": 116,
+  "total_aprobadas": 116
+}

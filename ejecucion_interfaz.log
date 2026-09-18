@@ -1,0 +1,31 @@
+UI-01 APROBADA Acceso incorrecto y Escape
+UI-02 APROBADA Acceso demostrativo correcto
+UI-03 APROBADA Validacion de campos obligatorios
+UI-04 APROBADA Registro de tres activos
+UI-05 APROBADA Codigo duplicado
+UI-06 APROBADA Valor negativo
+UI-07 APROBADA Edicion de activo
+UI-08 APROBADA Busqueda por codigo
+UI-09 APROBADA Validacion de cedula
+UI-10 APROBADA Asignacion
+UI-11 APROBADA Cancelacion y confirmacion de devolucion
+UI-12 APROBADA Tecnico de mantenimiento obligatorio
+UI-13 APROBADA Registro de mantenimiento
+UI-14 APROBADA Cierre de mantenimiento
+UI-15 APROBADA Cancelacion de mantenimiento
+UI-16 APROBADA Baja logica
+UI-17 APROBADA Recuperacion de estado al reinicializar
+UI-18 APROBADA Preferencias guardadas
+UI-19 APROBADA Trazabilidad tras renombrar
+UI-20 APROBADA Filtros combinados de reporte
+UI-21 APROBADA Rango invertido
+UI-22 APROBADA Descarga CSV
+UI-23 APROBADA Descarga de respaldo
+UI-24 APROBADA Rechazo de respaldo incompatible
+UI-25 APROBADA Restauracion de respaldo
+UI-26 APROBADA Renderizado seguro de texto
+UI-27 APROBADA Vista movil 390 x 844
+UI-28 APROBADA Vista movil 360 x 800
+UI-29 APROBADA Almacenamiento corrupto y recuperacion
+UI-30 APROBADA Cerrar demostracion
+RESULTADO 30 / 30
