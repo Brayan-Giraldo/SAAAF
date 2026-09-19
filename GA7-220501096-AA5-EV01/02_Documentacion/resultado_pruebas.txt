@@ -1,0 +1,16 @@
+
+> saaaf-auth-service-aa5-ev01@1.0.0 test
+> node tests/run-tests.js
+
+PASS - Health responde 200 | 200
+PASS - Registro correcto responde 201 | {"message":"Usuario registrado correctamente","usuario":{"id":1,"usuario":"bgiraldo","creadoEn":"2026-09-19T00:41:52.269Z"}}
+PASS - Registro confirma usuario | {"message":"Usuario registrado correctamente","usuario":{"id":1,"usuario":"bgiraldo","creadoEn":"2026-09-19T00:41:52.269Z"}}
+PASS - Usuario duplicado responde 409 | {"error":"El usuario ya se encuentra registrado"}
+PASS - Login correcto responde 200 | {"message":"Autenticacion satisfactoria","usuario":{"id":1,"usuario":"bgiraldo"}}
+PASS - Login devuelve mensaje satisfactorio | {"message":"Autenticacion satisfactoria","usuario":{"id":1,"usuario":"bgiraldo"}}
+PASS - Contrasena incorrecta responde 401 | {"error":"Error en la autenticacion"}
+PASS - Error de autenticacion informado | {"error":"Error en la autenticacion"}
+PASS - Usuario inexistente responde 401 | {"error":"Error en la autenticacion"}
+PASS - Validacion de datos responde 400 | {"error":"El usuario debe tener entre 4 y 40 caracteres"}
+
+Resultado: 10/10 pruebas aprobadas.

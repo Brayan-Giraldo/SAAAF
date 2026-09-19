@@ -1,0 +1,24 @@
+5b143ea (HEAD -> master) Agrega documentacion final y pruebas de la evidencia
+ ...gistro_Login_SAAAF_GA7_AA5_EV01_Brayan_Giraldo.docx | Bin 0 -> 45072 bytes
+ ...egistro_Login_SAAAF_GA7_AA5_EV01_Brayan_Giraldo.pdf | Bin 0 -> 136170 bytes
+ 03_Repositorio/historial_git.txt                       |   5 +++--
+ 3 files changed, 3 insertions(+), 2 deletions(-)
+f98680e Implementa servicio de registro e inicio de sesion - GA7-AA5-EV01
+ 01_Proyecto_Servicio_Web_SAAAF/.gitignore          |   6 ++
+ 01_Proyecto_Servicio_Web_SAAAF/README.md           |  75 +++++++++++++++
+ .../data/usuarios.example.json                     |   1 +
+ 01_Proyecto_Servicio_Web_SAAAF/package.json        |  14 +++
+ 01_Proyecto_Servicio_Web_SAAAF/public/app.js       |  26 +++++
+ 01_Proyecto_Servicio_Web_SAAAF/public/index.html   |  39 ++++++++
+ 01_Proyecto_Servicio_Web_SAAAF/public/styles.css   |  14 +++
+ 01_Proyecto_Servicio_Web_SAAAF/src/authStore.js    | 105 +++++++++++++++++++++
+ 01_Proyecto_Servicio_Web_SAAAF/src/server.js       |  84 +++++++++++++++++
+ 01_Proyecto_Servicio_Web_SAAAF/tests/run-tests.js  |  63 +++++++++++++
+ 02_Documentacion/ENDPOINTS.md                      |  28 ++++++
+ 02_Documentacion/VALIDACIONES.md                   |   9 ++
+ 02_Documentacion/resultado_pruebas.txt             |  16 ++++
+ 03_Repositorio/VERSIONAMIENTO.md                   |  18 ++++
+ 03_Repositorio/enlace_repositorio.txt              |   5 +
+ 03_Repositorio/historial_git.txt                   |  18 ++++
+ README_ENTREGA.md                                  |  18 ++++
+ 17 files changed, 539 insertions(+)

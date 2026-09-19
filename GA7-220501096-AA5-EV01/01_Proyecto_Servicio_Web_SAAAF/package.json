@@ -1,0 +1,14 @@
+{
+  "name": "saaaf-auth-service-aa5-ev01",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Servicio web de registro e inicio de sesion para el sistema SAAAF - GA7-220501096-AA5-EV01",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node tests/run-tests.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

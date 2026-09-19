@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAAAF - Registro e inicio de sesion</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="brand">SAAAF</div>
+      <div>
+        <h1>Servicio web de autenticacion</h1>
+        <p>Demostracion academica GA7-220501096-AA5-EV01</p>
+      </div>
+    </header>
+
+    <section class="grid">
+      <form id="registerForm" class="card">
+        <h2>Registro</h2>
+        <label>Usuario<input name="usuario" minlength="4" maxlength="40" required></label>
+        <label>Contrasena<input type="password" name="contrasena" minlength="8" maxlength="72" required></label>
+        <button type="submit">Registrar usuario</button>
+        <pre id="registerResult" class="result">Esperando solicitud...</pre>
+      </form>
+
+      <form id="loginForm" class="card">
+        <h2>Inicio de sesion</h2>
+        <label>Usuario<input name="usuario" minlength="4" maxlength="40" required></label>
+        <label>Contrasena<input type="password" name="contrasena" minlength="8" maxlength="72" required></label>
+        <button type="submit">Iniciar sesion</button>
+        <pre id="loginResult" class="result">Esperando solicitud...</pre>
+      </form>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
